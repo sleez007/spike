@@ -1,0 +1,18 @@
+.wrapper {
+  box-shadow: 0 0.125rem 0.5rem #0000001a;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.3s ease-in-out;
+  
+  &.open {
+    grid-template-rows: 1fr;
+  }
+}
+
+.content-inner {
+  min-height: 0;
+}

@@ -14,6 +14,7 @@
   --color-gray-400: #858d9d;
   --color-gray-500: #667085;
   --color-gray-700: #525d73;
+  --color-gray-900: #404a60;
 
   --color-green-50: #e9faf0;
   --color-green-700: #02983e;
@@ -21,8 +22,10 @@
   --color-green-800: #00732e;
   --color-red-800: #c6190d;
   --color-red-700: #e5372b;
+  --color-blue-100: #d7eaff;
   --color-blue-600: #1873de;
   --color-yellow-600: #eba622;
+  --color-slate-700: #334155;
 
   --font-sans: 'Public Sans', sans-serif;
 }

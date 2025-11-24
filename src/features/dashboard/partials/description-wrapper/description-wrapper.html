@@ -1,0 +1,36 @@
+<div>
+  <h4 class="font-bold text-xl text-green-700 capitalize">Description</h4>
+  <p class="text-xs text-gray-700 mt-4 leading-5">
+    Lorem ipsum dolor sit amet consectetur. Aenean sodales pellentesque gravida nibh et magna
+    faucibus. Dui commodo ut metus amet egestas habitant viverra. Quisque fusce senectus facilisis
+    non diam leo nulla sem pellentesque. Sit in vel sed cursus metus sit fringilla vestibulum.
+  </p>
+</div>
+
+<div class="mt-8">
+  <h4 class="font-bold text-xl text-green-700 capitalize">extra</h4>
+  <p class="text-xs text-gray-700 mt-4 leading-5">
+    Lorem ipsum dolor sit amet consectetur. Tempus a id adipiscing fames egestas tellus dis pretium
+    tempus. Justo nisl nisl lorem lectus id ornare. Rhoncus in egestas in amet porttitor
+    pellentesque sit. Amet gravida integer velit felis. Eu consectetur interdum auctor sed aliquam.
+    Eu pulvinar accumsan sed id. Duis a aliquam eu quisque commodo lectus. Lectus ipsum velit purus
+    viverra vulputate viverra in nunc nulla. Euismod rhoncus mauris urna orci gravida sagittis
+    netus. Amet mus in vel etiam. Interdum habitant congue massa in etiam sit. Commodo nibh viverra
+    lobortis augue lorem quam lorem suspendisse.
+  </p>
+</div>
+<div class="my-8 h-0.5 bg-[#F9F9F9]"></div>
+@for (item of items; track item.id) {
+  <div class="grid grid-cols-2 items-center gap-4 mb-2">
+    <h4 class="col-span-1 font-bold text-[15px] text-slate-700 capitalize">{{ item.title }}</h4>
+    <p class="col-span-1 text-xs text-gray-700 text-[15px] leading-5">{{ item.content }}</p>
+  </div>
+}
+<div class="my-8 h-0.5 bg-[#F9F9F9]"></div>
+
+<h4 class="font-bold text-[15px] text-slate-700 capitalize mb-4">Lorem ipsum dolor sit</h4>
+<div class="flex flex-col gap-4">
+  @for (item of techniques; track item.id) {
+    <app-server-accordion [item]="item" />
+  }
+</div>
