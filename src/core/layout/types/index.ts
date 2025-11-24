@@ -1,2 +1,3 @@
 export * from './nav-item.type';
-export * from './technique.model';
+export * from './technique.type';
+export * from './asset.type';

@@ -1,1 +1,24 @@
-<p>asset-list works!</p>
+<div class="wrapper | py-3 rounded-xl border border-gray-100">
+  <div
+    class="grid gap-4 pb-2 grid-cols-[1fr_auto] border-b border-gray-100 text-gray-400 text-[13px] px-6"
+  >
+    <span>Asset</span>
+    <span>Contextual Risk</span>
+  </div>
+
+  @for (asset of assets(); track asset.id) {
+    <app-asset-item [asset]="asset" />
+  }
+
+  <div class="flex items-center justify-center gap-1 mt-2 text-gray-500 text-[13px]">
+    <button mat-icon-button [disabled]="currentPage() === 1">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <span class="pagination-info">
+      Showing {{ currentPage() }}-{{ totalPages() }} of {{ totalPages() }}
+    </span>
+    <button mat-icon-button [disabled]="currentPage() === totalPages()">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</div>

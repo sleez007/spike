@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-risk-summary',
   imports: [],
   templateUrl: './risk-summary.html',
-  styleUrl: './risk-summary.css',
+  styleUrl: './risk-summary.scss',
 })
-export class RiskSummary {
-
-}
+export class RiskSummary {}
