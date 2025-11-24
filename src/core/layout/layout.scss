@@ -1,0 +1,10 @@
+.sidenav {
+  box-shadow: 0px 16px 18px 0px #0000000f;
+  width: var(--sidenav-width);
+  transition: width 0.3s ease !important;
+  overflow: visible;
+
+  &.collapsed {
+    width: var(--sidenav-collapsed-width);
+  }
+}

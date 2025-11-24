@@ -1,7 +1,17 @@
-<div class="relative size-full">
-  <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #sidenav fixedInViewport="true" mode="side"> </mat-sidenav>
-    <mat-sidenav-content class="sidenav-content">
+<div class="relative h-full">
+  <mat-sidenav-container class="sidenav-container | h-full bg-gray-25!">
+    <mat-sidenav
+      #sidenav
+      [disableClose]="isDesktop()"
+      [fixedInViewport]="true"
+      [mode]="isDesktop() ? 'side' : 'over'"
+      [opened]="isDesktop()"
+      [class.collapsed]="isSideNavCollapsed()"
+      class="sidenav"
+    >
+      <ng-container *ngTemplateOutlet="sidenavRef()" />
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-content | overflow-x-hidden">
       <main class="content">
         <router-outlet />
         <p>hello</p>

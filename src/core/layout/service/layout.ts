@@ -6,7 +6,7 @@ import { map } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class Layout {
+export class LayoutService {
   private readonly breakPointObserver = inject(BreakpointObserver);
   readonly isSideNavCollapsed = signal(false);
   readonly isSideNavOpen = signal(true);

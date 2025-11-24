@@ -2,23 +2,27 @@
 
 @import 'tailwindcss';
 
-@theme {
-  /* COLORS */
-  --gray-300: #a3a9b6;
-  --gray-400: #858d9d;
-  --gray-500: #667085;
-  --gray-700: #525d73;
-
-  --green-700: #02983e;
-  --green-600: #08b94e;
-  --red-800: #c6190d;
-  --red-700: #e5372b;
-  --blue-600: #1873de;
-  --yellow-600: #eba622;
-
-  /* SIZE VALUES */
+:root {
   --sidenav-width: 250px;
   --sidenav-collapsed-width: 54px;
+}
+
+@theme {
+  /* COLORS */
+  --color-gray-25: #fafafa;
+  --color-gray-300: #a3a9b6;
+  --color-gray-400: #858d9d;
+  --color-gray-500: #667085;
+  --color-gray-700: #525d73;
+
+  --color-green-50: #e9faf0;
+  --color-green-700: #02983e;
+  --color-green-600: #08b94e;
+  --color-green-800: #00732e;
+  --color-red-800: #c6190d;
+  --color-red-700: #e5372b;
+  --color-blue-600: #1873de;
+  --color-yellow-600: #eba622;
 
   --font-sans: 'Public Sans', sans-serif;
 }

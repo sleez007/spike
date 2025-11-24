@@ -1,0 +1,31 @@
+<div class="h-full flex flex-col py-4 bg-white">
+  <button
+    mat-icon-button
+    (click)="toggleCollapse()"
+    class="btn | border border-white absolute -end-4 size-8 z-50 rounded-full flex items-center justify-center bg-green-800"
+    [attr.aria-label]="isCollapsed() ? 'Expand sidebar' : 'Collapse sidebar'"
+  >
+    <mat-icon class="text-white!">{{ isCollapsed() ? 'chevron_right' : 'chevron_left' }}</mat-icon>
+  </button>
+  <!-- TOP AREA WITH SCROLL CONTENT -->
+  <div class="flex-1" [class.px-4]="!isCollapsed()">
+    @if (isCollapsed()) {
+      <div class="px-4 mb-8 -ms-0.5">
+        <img src="/assets/images/logo.png" class="max-w-6" alt="Logo" />
+      </div>
+    }
+    @for (item of menuItems; track item.route) {
+      <app-sidenav-item [item]="item" [isCollapsed]="isCollapsed()" />
+    }
+  </div>
+
+  <!-- BOTTOM AREA -->
+  <div class="bottom-section" [class.px-4]="!isCollapsed()">
+    @for (item of bottomMenuItems; track item.route) {
+      <app-sidenav-item [item]="item" [isCollapsed]="isCollapsed()" />
+    }
+
+    <div class="my-8 h-0.5 bg-[#F9F9F9]"></div>
+    <app-account [isCollapsed]="isCollapsed()" />
+  </div>
+</div>

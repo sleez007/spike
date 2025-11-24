@@ -1,0 +1,19 @@
+@reference "tailwindcss";
+
+.item {
+  & svg-icon {
+    width: 2rem;
+    @apply text-gray-400;
+  }
+  &:hover {
+    @apply bg-gray-300/20 text-gray-700;
+
+    & svg-icon {
+      @apply text-gray-700;
+    }
+  }
+
+  &.active:hover {
+    @apply bg-green-50;
+  }
+}

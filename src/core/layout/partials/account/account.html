@@ -1,0 +1,19 @@
+<button class="flex cursor-pointer justify-between items-center w-full">
+  <div class="flex flex-row gap-4 items-center">
+    <img
+      src="assets/images/account.png"
+      [class]="isCollapsed() ? 'size-10 mx-1' : 'size-12'"
+      alt="profile picture"
+    />
+    @if (!isCollapsed()) {
+      <div class="flex-col gap-2 capitalize">
+        <h5 class="text-sm text-gray-700">lorem</h5>
+        <p class="text-sm text-gray-700">lorem</p>
+      </div>
+    }
+  </div>
+
+  @if (!isCollapsed()) {
+    <svg-icon src="/assets/icons/ic-logout.svg"></svg-icon>
+  }
+</button>
