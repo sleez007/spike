@@ -1,12 +1,16 @@
 <div class="h-full flex flex-col py-4 bg-white">
-  <button
-    mat-icon-button
-    (click)="toggleCollapse()"
-    class="btn | border border-white absolute -end-4 size-8 z-50 rounded-full flex items-center justify-center bg-green-800"
-    [attr.aria-label]="isCollapsed() ? 'Expand sidebar' : 'Collapse sidebar'"
-  >
-    <mat-icon class="text-white!">{{ isCollapsed() ? 'chevron_right' : 'chevron_left' }}</mat-icon>
-  </button>
+  @if (!isMobile()) {
+    <button
+      mat-icon-button
+      (click)="toggleCollapse()"
+      class="btn | border border-white absolute -end-4 size-8 z-50 rounded-full flex items-center justify-center bg-green-800"
+      [attr.aria-label]="isCollapsed() ? 'Expand sidebar' : 'Collapse sidebar'"
+    >
+      <mat-icon class="text-white!">{{
+        isCollapsed() ? 'chevron_right' : 'chevron_left'
+      }}</mat-icon>
+    </button>
+  }
   <!-- TOP AREA WITH SCROLL CONTENT -->
   <div class="flex-1" [class.px-4]="!isCollapsed()">
     @if (isCollapsed()) {

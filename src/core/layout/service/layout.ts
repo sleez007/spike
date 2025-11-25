@@ -9,7 +9,7 @@ import { map } from 'rxjs';
 export class LayoutService {
   private readonly breakPointObserver = inject(BreakpointObserver);
   readonly isSideNavCollapsed = signal(false);
-  readonly isSideNavOpen = signal(true);
+  readonly isSideNavOpen = signal(false);
 
   private readonly isTabletOrDesktop$ = this.breakPointObserver
     .observe(`(min-width: 800px)`)

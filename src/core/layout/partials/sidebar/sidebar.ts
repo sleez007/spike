@@ -14,6 +14,7 @@ import { Account } from '../account/account';
 })
 export class Sidebar {
   private readonly layoutService = inject(LayoutService);
+  readonly isMobile = this.layoutService.isMobile;
   readonly menuItems = menuItems;
   readonly bottomMenuItems = bottomMenuItems;
 

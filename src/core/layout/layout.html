@@ -1,11 +1,14 @@
 <div class="relative h-full">
-  <mat-sidenav-container class="sidenav-container | h-full bg-gray-25!">
+  <mat-sidenav-container
+    class="sidenav-container | h-full bg-gray-25!"
+    (backdropClick)="toggleSideNav()"
+  >
     <mat-sidenav
       #sidenav
       [disableClose]="isTabletOrDesktop()"
       [fixedInViewport]="isTabletOrDesktop()"
       [mode]="isTabletOrDesktop() ? 'side' : 'over'"
-      [opened]="isTabletOrDesktop()"
+      [opened]="isTabletOrDesktop() || (!isTabletOrDesktop() && isSideNavOpen())"
       [class.collapsed]="!isMobile() && isSideNavCollapsed()"
       class="sidenav"
     >
@@ -16,6 +19,16 @@
       [class.expanded]="isTabletOrDesktop() && !isSideNavCollapsed()"
       class="sidenav-content | overflow-x-hidden"
     >
+      @if (!isTabletOrDesktop()) {
+        <button
+          mat-icon-button
+          (click)="toggleSideNav()"
+          class="mobile-menu-btn | fixed top-4 left-4 z-50 bg-white shadow-md"
+          aria-label="Toggle menu"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+      }
       <main class="content | h-full">
         <router-outlet />
       </main>
