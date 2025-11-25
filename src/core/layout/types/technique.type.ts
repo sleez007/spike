@@ -1,4 +1,5 @@
 export interface Technique {
+  header: string;
   id: number;
   label: string;
   subLabel: string;

@@ -44,16 +44,18 @@ export class DescriptionWrapper {
 
   readonly techniques: Technique[] = [
     {
-      id: 0,
+      id: 3,
+      header: 'Lorem P',
       label: 'Server',
       subLabel: 'server',
       title: 'Lorem ipsum dolor sit amet consectetur.',
       content:
-        'Lorem ipsum dolor sit amet consectetur. In laoreet elementum luctus odio. Id enim urna.',
+        'Lorem ipsum dolor sit amet consectetur. Nunc vitae tortor convallis vitae arcu. Magna.',
       icon: '/assets/icons/server.svg',
     },
     {
       id: 1,
+      header: 'Lorem S',
       label: 'Server',
       subLabel: 'server',
       title: 'Lorem ipsum dolor sit amet consectetur.',
@@ -62,12 +64,13 @@ export class DescriptionWrapper {
       icon: '/assets/icons/server.svg',
     },
     {
-      id: 3,
+      id: 0,
+      header: 'Lorem T',
       label: 'Server',
       subLabel: 'server',
       title: 'Lorem ipsum dolor sit amet consectetur.',
       content:
-        'Lorem ipsum dolor sit amet consectetur. Nunc vitae tortor convallis vitae arcu. Magna.',
+        'Lorem ipsum dolor sit amet consectetur. In laoreet elementum luctus odio. Id enim urna.',
       icon: '/assets/icons/server.svg',
     },
   ];
