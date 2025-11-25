@@ -1,10 +1,19 @@
-.sidenav {
+.sidenav,
+mat-sidenav {
   box-shadow: 0px 16px 18px 0px #0000000f;
-  width: var(--sidenav-width);
+  width: var(--sidenav-width) !important;
   transition: width 0.3s ease !important;
   overflow: visible;
 
   &.collapsed {
-    width: var(--sidenav-collapsed-width);
+    width: var(--sidenav-collapsed-width) !important;
   }
+}
+
+.coll {
+  margin-left: var(--sidenav-collapsed-width) !important;
+}
+
+.expanded {
+  margin-left: var(--sidenav-width) !important;
 }

@@ -11,7 +11,11 @@
     >
       <ng-container *ngTemplateOutlet="sidenavRef()" />
     </mat-sidenav>
-    <mat-sidenav-content class="sidenav-content | overflow-x-hidden">
+    <mat-sidenav-content
+      [class.coll]="isSideNavCollapsed()"
+      [class.expanded]="!isSideNavCollapsed()"
+      class="sidenav-content | overflow-x-hidden"
+    >
       <main class="content | h-full">
         <router-outlet />
       </main>
