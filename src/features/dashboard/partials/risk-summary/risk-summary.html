@@ -13,7 +13,10 @@
         </div>
       }
     </div>
-    <div class="size-36 border-[6px] rounded-full flex items-center justify-center" [class]="'border-' + criticalBorderColor.replace('bg-', '')">
+    <div
+      class="size-36 border-[6px] rounded-full flex items-center justify-center"
+      [class]="'border-' + criticalBorderColor.replace('bg-', '')"
+    >
       <span class="text-gray-7 font-semibold text-4xl text-[24px]">{{ totalCriticalCount }}</span>
     </div>
   </div>

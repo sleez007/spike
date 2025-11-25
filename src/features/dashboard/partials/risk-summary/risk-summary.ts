@@ -23,10 +23,12 @@ export class RiskSummary {
   ];
 
   get totalCriticalCount() {
-    return this.riskItems.find(item => item.status === AssetStatus.CRITICAL)?.count || 0;
+    return this.riskItems.find((item) => item.status === AssetStatus.CRITICAL)?.count || 0;
   }
 
   get criticalBorderColor() {
-    return this.riskItems.find(item => item.status === AssetStatus.CRITICAL)?.bgColor || 'bg-red-800';
+    return (
+      this.riskItems.find((item) => item.status === AssetStatus.CRITICAL)?.bgColor || 'bg-red-800'
+    );
   }
 }
