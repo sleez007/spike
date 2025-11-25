@@ -11,13 +11,13 @@
   }
 
   <div class="flex items-center justify-center gap-1 mt-2 text-gray-500 text-[13px]">
-    <button mat-icon-button [disabled]="currentPage() === 1">
+    <button mat-icon-button [disabled]="currentPage() === 1" (click)="previousPage()">
       <mat-icon>chevron_left</mat-icon>
     </button>
     <span class="pagination-info">
-      Showing {{ currentPage() }}-{{ totalPages() }} of {{ totalPages() }}
+      Page {{ currentPage() }} of {{ totalPages() }}
     </span>
-    <button mat-icon-button [disabled]="currentPage() === totalPages()">
+    <button mat-icon-button [disabled]="currentPage() === totalPages()" (click)="nextPage()">
       <mat-icon>chevron_right</mat-icon>
     </button>
   </div>
