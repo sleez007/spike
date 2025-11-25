@@ -10,8 +10,8 @@
   <!-- TOP AREA WITH SCROLL CONTENT -->
   <div class="flex-1" [class.px-4]="!isCollapsed()">
     @if (isCollapsed()) {
-      <div class="px-4 mb-8 -ms-0.5">
-        <img src="/assets/images/logo.png" class="max-w-6" alt="Logo" />
+      <div class="px-4 mb-8 flex items-center justify-center">
+        <img src="/assets/images/logo.png" class="max-w-8" alt="Logo" />
       </div>
     }
     @for (item of menuItems; track item.route) {

@@ -2,7 +2,6 @@
 
 .item {
   & svg-icon {
-    width: 2rem;
     @apply text-gray-400;
   }
   &:hover {

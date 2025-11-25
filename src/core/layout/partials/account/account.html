@@ -1,5 +1,5 @@
 <button class="flex cursor-pointer justify-between items-center w-full">
-  <div class="flex flex-row gap-4 items-center">
+  <div class="flex flex-row gap-4 items-center w-full" [class.justify-center]="isCollapsed()">
     <img
       src="assets/images/account.png"
       [class]="isCollapsed() ? 'size-10 mx-1' : 'size-12'"

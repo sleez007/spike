@@ -4,7 +4,7 @@
 
 :root {
   --sidenav-width: 250px;
-  --sidenav-collapsed-width: 54px;
+  --sidenav-collapsed-width: 80px;
 }
 
 @theme {
