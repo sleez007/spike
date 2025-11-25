@@ -17,11 +17,27 @@
 }
 
 svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  
   .hover-group:hover circle {
     filter: brightness(1.1);
   }
 
   .hover-group:hover path {
     filter: brightness(1.1);
+  }
+}
+
+svg-icon {
+  display: block;
+  width: 100%;
+  height: auto;
+  
+  svg {
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
   }
 }
