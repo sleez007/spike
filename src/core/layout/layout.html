@@ -2,18 +2,18 @@
   <mat-sidenav-container class="sidenav-container | h-full bg-gray-25!">
     <mat-sidenav
       #sidenav
-      [disableClose]="isDesktop()"
-      [fixedInViewport]="true"
-      [mode]="isDesktop() ? 'side' : 'over'"
-      [opened]="isDesktop()"
-      [class.collapsed]="isSideNavCollapsed()"
+      [disableClose]="isTabletOrDesktop()"
+      [fixedInViewport]="isTabletOrDesktop()"
+      [mode]="isTabletOrDesktop() ? 'side' : 'over'"
+      [opened]="isTabletOrDesktop()"
+      [class.collapsed]="!isMobile() && isSideNavCollapsed()"
       class="sidenav"
     >
       <ng-container *ngTemplateOutlet="sidenavRef()" />
     </mat-sidenav>
     <mat-sidenav-content
-      [class.coll]="isSideNavCollapsed()"
-      [class.expanded]="!isSideNavCollapsed()"
+      [class.coll]="isTabletOrDesktop() && isSideNavCollapsed()"
+      [class.expanded]="isTabletOrDesktop() && !isSideNavCollapsed()"
       class="sidenav-content | overflow-x-hidden"
     >
       <main class="content | h-full">

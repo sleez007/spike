@@ -12,6 +12,9 @@ import { CommonModule } from '@angular/common';
 export class Layout {
   private readonly layoutService = inject(LayoutService);
   readonly sidenavRef = input.required<TemplateRef<Element>>();
+  readonly isTabletOrDesktop = this.layoutService.isTabletOrDesktop;
   readonly isDesktop = this.layoutService.isDesktop;
+  readonly isTablet = this.layoutService.isTablet;
+  readonly isMobile = this.layoutService.isMobile;
   readonly isSideNavCollapsed = this.layoutService.isSideNavCollapsed;
 }

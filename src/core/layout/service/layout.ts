@@ -11,6 +11,10 @@ export class LayoutService {
   readonly isSideNavCollapsed = signal(false);
   readonly isSideNavOpen = signal(true);
 
+  private readonly isTabletOrDesktop$ = this.breakPointObserver
+    .observe(`(min-width: 800px)`)
+    .pipe(map((state) => state.matches));
+
   private readonly isDesktop$ = this.breakPointObserver
     .observe(`(min-width: 1280px)`)
     .pipe(map((state) => state.matches));
@@ -24,6 +28,7 @@ export class LayoutService {
   readonly isDesktop = toSignal(this.isDesktop$);
   readonly isTablet = toSignal(this.isTablet$);
   readonly isMobile = toSignal(this.isMobile$);
+  readonly isTabletOrDesktop = toSignal(this.isTabletOrDesktop$);
 
   toggleSideNav() {
     this.isSideNavOpen.update((value) => !value);
