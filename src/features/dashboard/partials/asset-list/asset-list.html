@@ -1,6 +1,6 @@
 <div class="wrapper | py-3 rounded-xl border border-gray-100">
   <div
-    class="grid gap-4 pb-2 grid-cols-[1fr_auto] border-b border-gray-100 text-gray-400 text-[13px] px-6"
+    class="grid gap-4 pb-2 grid-cols-[1fr_auto] border-b border-gray-100 text-gray-400 text-compact px-6"
   >
     <span>Asset</span>
     <span>Contextual Risk</span>
@@ -10,7 +10,7 @@
     <app-asset-item [asset]="asset" />
   }
 
-  <div class="flex items-center justify-center gap-1 mt-2 text-gray-500 text-[13px]">
+  <div class="flex items-center justify-center gap-1 mt-2 text-gray-500 text-compact">
     <button mat-icon-button [disabled]="currentPage() === 1" (click)="previousPage()">
       <mat-icon>chevron_left</mat-icon>
     </button>

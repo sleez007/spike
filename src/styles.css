@@ -36,8 +36,17 @@
   --color-orange: #ff9500;
   --color-purple-50: #f2edff;
   --color-purple-600: #6236cc;
+  --color-navy-900: #030229;
   --font-sans: 'Public Sans', sans-serif;
   --font-ibm-plex: 'IBM Plex Sans', sans-serif;
+  
+  /* FONT SIZES */
+  --font-size-xs: 9.45px;
+  --font-size-sm: 11px;
+  --font-size-compact: 13px;
+  --font-size-base: 15px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
 }
 
 html,
