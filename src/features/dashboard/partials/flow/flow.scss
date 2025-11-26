@@ -30,6 +30,10 @@
   }
 }
 
+.wrap {
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
 .pim > svg-icon {
   display: block;
   width: 100%;
@@ -41,3 +45,5 @@
     max-width: none !important;
   }
 }
+
+// [class.opacity-100]="hoveredElement !== null"

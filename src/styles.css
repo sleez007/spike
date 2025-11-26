@@ -29,11 +29,15 @@
   --color-blue-50: #ecf5ff;
   --color-blue-100: #d7eaff;
   --color-blue-600: #1873de;
+  --color-blue-700: #0053b5;
+  --color-yellow-50: #fff9ed;
   --color-yellow-600: #eba622;
   --color-slate-700: #334155;
   --color-orange: #ff9500;
-
+  --color-purple-50: #f2edff;
+  --color-purple-600: #6236cc;
   --font-sans: 'Public Sans', sans-serif;
+  --font-ibm-plex: 'IBM Plex Sans', sans-serif;
 }
 
 html,

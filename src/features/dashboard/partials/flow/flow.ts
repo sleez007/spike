@@ -9,6 +9,14 @@ import {
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { CommonModule } from '@angular/common';
 
+enum Servers {
+  SERVER_1 = 'server1',
+  SERVER_2 = 'server2',
+  SERVER_3 = 'server3',
+  SERVER_4 = 'server4',
+  SERVER_5 = 'server5',
+}
+
 @Component({
   selector: 'app-flow',
   imports: [AngularSvgIconModule, CommonModule],
@@ -16,6 +24,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './flow.scss',
 })
 export class Flow implements AfterViewInit {
+  readonly Servers = Servers;
   hoveredElement: string | null = null;
   modalPosition = { x: 0, y: 0 };
 
