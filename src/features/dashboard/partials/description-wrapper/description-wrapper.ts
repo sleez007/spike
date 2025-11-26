@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ServerAccordion } from '../server-accordion/server-accordion';
 import { Technique } from '../../../../core/layout/types';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @Component({
   selector: 'app-description-wrapper',
-  imports: [ServerAccordion],
+  imports: [ServerAccordion, AngularSvgIconModule],
   templateUrl: './description-wrapper.html',
   styleUrl: './description-wrapper.scss',
 })
@@ -21,9 +22,15 @@ export class DescriptionWrapper {
       content: 'Ut',
     },
     {
+      id: 1,
+      title: 'Lorem ipsum dolor',
+      content: 'Eros',
+    },
+    {
       id: 2,
       title: 'Lorem ipsum dolor',
       content: 'Yes',
+      icon: '/assets/icons/ic-check.svg',
     },
     {
       id: 3,

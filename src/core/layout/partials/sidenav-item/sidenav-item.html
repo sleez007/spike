@@ -6,11 +6,13 @@
   routerLinkActive="active"
   [routerLinkActiveOptions]="{ exact: true }"
   [class.justify-center]="isCollapsed()"
-  class="item | flex w-full min-h-10 flex-row position no-underline py-2 gap-2 px-4 items-center text-gray-700 transition-all ease-in duration-200 rounded-sm"
+  class="item | leading-two flex w-full min-h-10 flex-row position no-underline py-2 gap-2 px-4 items-center text-gray-700 transition-all ease-in duration-200 rounded-sm"
   matRipple
 >
-  <svg-icon svgClass="transition-all duration-200 ease-in" [src]="item().icon"></svg-icon>
+  <div class="flex items-center size-5 justify-between">
+    <svg-icon svgClass="transition-all  duration-200 ease-in" [src]="item().icon"></svg-icon>
+  </div>
   @if (!isCollapsed()) {
-    <span class="item-label">{{ item().label }}</span>
+    <span class="item-label| text-base">{{ item().label }}</span>
   }
 </a>

@@ -37,16 +37,29 @@
   --color-purple-50: #f2edff;
   --color-purple-600: #6236cc;
   --color-navy-900: #030229;
+  --color-divider: #f9f9f9;
   --font-sans: 'Public Sans', sans-serif;
   --font-ibm-plex: 'IBM Plex Sans', sans-serif;
-  
+
   /* FONT SIZES */
-  --font-size-xs: 9.45px;
-  --font-size-sm: 11px;
-  --font-size-compact: 13px;
-  --font-size-base: 15px;
-  --font-size-lg: 18px;
-  --font-size-xl: 24px;
+  --text-compact: 13px;
+  --text-base: 15px;
+  --text-hairline: 9.45px;
+  --text-caption: 12.5px;
+  --text-large: 35px;
+
+  /* Letter spacing  */
+  --tracking-one: 1%;
+  --tracking-0_4: 0.4px;
+
+  /* Line height */
+  --spacing-tiny: 10.13px;
+  --spacing-compact: 13.5px;
+  --spacing-hairline: 18px;
+  --spacing-one: 21px;
+  --spacing-two: 22px;
+  --spacing-eight: 28px;
+  --spacing-38: 38px;
 }
 
 html,
